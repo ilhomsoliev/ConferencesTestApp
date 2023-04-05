@@ -1,4 +1,4 @@
-package com.ilhomsoliev.conferencestestapp.ui.theme
+package com.ilhomsoliev.conferencestestapp.app.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

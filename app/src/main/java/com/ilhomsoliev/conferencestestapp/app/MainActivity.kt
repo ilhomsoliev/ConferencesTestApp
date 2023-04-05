@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.ilhomsoliev.conferencestestapp.app.navigation.Navigation
-import com.ilhomsoliev.conferencestestapp.ui.theme.ConferencesTestAppTheme
+import com.ilhomsoliev.conferencestestapp.app.theme.ConferencesTestAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
