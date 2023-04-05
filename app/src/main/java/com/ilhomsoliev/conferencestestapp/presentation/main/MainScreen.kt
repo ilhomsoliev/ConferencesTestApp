@@ -1,5 +1,6 @@
 package com.ilhomsoliev.conferencestestapp.presentation.main
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
@@ -47,6 +48,7 @@ fun MainScreen(
             }
 
             val loadState = conferences.loadState.mediator
+            Log.d("Hello State", loadState.toString())
             item {
                 if (loadState?.refresh == LoadState.Loading) {
                     Column(
