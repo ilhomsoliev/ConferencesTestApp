@@ -1,4 +1,4 @@
-package com.ilhomsoliev.conferencestestapp.ui.theme
+package com.ilhomsoliev.conferencestestapp.app.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
