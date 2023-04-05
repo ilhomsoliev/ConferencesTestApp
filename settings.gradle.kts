@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ConferencesTestApp"
-include ':app'
+include (":app")
