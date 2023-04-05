@@ -7,6 +7,8 @@ import com.ilhomsoliev.conferencestestapp.data.local.ConferenceDao
 import com.ilhomsoliev.conferencestestapp.data.local.ConferenceDatabase
 import com.ilhomsoliev.conferencestestapp.data.local.RemoteKeysDao
 import com.ilhomsoliev.conferencestestapp.data.remote.ConferenceApi
+import com.ilhomsoliev.conferencestestapp.data.repostitory.ConferenceRepositoryImpl
+import com.ilhomsoliev.conferencestestapp.domain.repository.ConferenceRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -36,6 +38,13 @@ object AppModule {
             .build()
             .create(ConferenceApi::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun provideConferenceRepository(
+        api: ConferenceApi,
+        database: ConferenceDatabase
+    ): ConferenceRepository = ConferenceRepositoryImpl(api, database)
 
     @Singleton
     @Provides
