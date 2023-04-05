@@ -15,6 +15,7 @@ import com.ilhomsoliev.conferencestestapp.presentation.main.MainEvent
 import com.ilhomsoliev.conferencestestapp.presentation.main.MainScreen
 import com.ilhomsoliev.conferencestestapp.presentation.main.MainViewModel
 import com.ilhomsoliev.conferencestestapp.core.Constants
+import com.ilhomsoliev.conferencestestapp.presentation.webview.WebViewPage
 
 @Composable
 fun Navigation() {
@@ -48,7 +49,9 @@ fun Navigation() {
                         type = NavType.StringType
                     })
             ) { backStackEntry ->
-
+                val urlNumber = backStackEntry.arguments?.getString(Constants.URL_ARG_ID) ?: ""
+                val url = Constants.BASE_URL + "guide/" + urlNumber
+                WebViewPage(url = url)
             }
         }
     }
